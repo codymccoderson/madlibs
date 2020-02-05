@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <title>My Madlib</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Put Some Words In!</h1>
+        <form id="myForm" role="form">
+            <div class="formGroup">
+                <label for="number">Number</label>
+                <input id="numberInput" type="text" placeholder="Enter a number" value="">
+            </div>
+            <div class="formGroup">
+                <label for="maleActor">Male Actor</label>
+                <input id="maleActorInput" type="text" placeholder="Name a male actor" value="">
+            </div>
+            <div class="formGroup">
+                <label for="adjective">Adjective</label>
+                <input id="adjectiveInput" type="text" placeholder="Gimme an adjective" value="">
+            </div>
+            <div class="formGroup">
+                <label for="fastFoodChain">Fast Food Chain</label>
+                <input id="fastFoodChainInput" type="text" placeholder="Name a fast food chain" value="">
+            <div class="formGroup">
+                <label for="drink">Drink</label>
+                <input id="drinkInput" type="text" placeholder="Name a beverage" value="">
+            </div>
+            <div class="formGroup">
+                <label for="pastTenseVerb">Past-Tense Verb</label>
+                <input id="pastTenseVerbInput" type="text" placeholder="Past-Tense Verb please" value="">
+            </div>
+            <div class="formGroup">
+                <label for="foodItem">Food Item</label>
+                <input id="foodItemInput" type="text" placeholder="Gimme a Food Item" value="">
+            </div>
+        </form>
+        <div id="story">
+            <h1>A Poorly Thought Out Story</h1>
+            <hr>
+            <div id="madlib"></div>
+            <p>I drove <span id="number"></span> miles to Chicago on a Wednesday night looking for <span id="maleActor"></span> from Curb Your Enthusiasm. The trip was <span id="adjective"></span> and I desperately needed to stop for food at <span id="fastFoodChain"></span>. After eating way too much, I made it to the bar downtown and had a <span class="drink"></span>. It was terrible. I <span id="pastTenseVerb"></span> the drink directly into the bartender's face and was kicked out of the premises. After wriggling free from the bouncer's grasp, I found my way over to Wrigley Field and found his section. I bought him a <span id="foodItem"></span> and thanked him for his contribution to the arts.</p>
+        </div>
+        <button type="button" id="clickMe">Make Your Madlib!</button>
+    </div>
+</body>
+<script>
+    const myButton = document.getElementById("clickMe");
+    const number = document.getElementById("number");
+    const numberInput = document.getElementById("numberInput")
+    const maleActor = document.getElementById("maleActor");
+    const maleActorInput = document.getElementById("maleActorInput");
+    const adjective = document.getElementById("adjective");
+    const adjectiveInput = document.getElementById("adjectiveInput");
+    const fastFoodChain = document.getElementById("fastFoodChain");
+    const fastFoodChainInput = document.getElementById("fastFoodChainInput");
+    const pastTenseVerb = document.getElementById("pastTenseVerb");
+    const pastTenseVerbInput = document.getElementById("pastTenseVerbInput");
+    const drink = document.getElementById("drink");
+    const drinkInput = document.getElementById("drinkInput");
+    const foodItem = document.getElementById("foodItem");
+    const foodItemInput = document.getElementById("foodItemInput");
+    const myText = document.getElementById("madlib");
+
+    myButton.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        number.innerHTML = numberInput.value;
+        maleActor.innerHTML = maleActorInput.value;
+        adjective.innerHTML = adjectiveInput.value;
+        fastFoodChain.innerHTML = fastFoodChainInput.value;
+        pastTenseVerb.innerHTML = pastTenseVerbInput.value;
+        drink.innerHTML = drinkInput.value;
+        foodItem.innerHTML = foodItemInput.value;
+        
+    })
+</script>
+
+</html>

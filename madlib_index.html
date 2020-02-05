@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <title>My Madlib</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Put Some Words In!</h1>
+        <form id="myForm" role="form">
+            <div class="formGroup">
+                <label for="number">Number</label>
+                <input id="number" type="text" placeholder="Enter a number" value="">
+            </div>
+            <div class="formGroup">
+                <label for="maleActor">Male Actor</label>
+                <input id="maleActor" type="text" placeholder="Name a male actor" value="">
+            </div>
+            <div class="formGroup">
+                <label for="adjective">Adjective</label>
+                <input id="adjective" type="text" placeholder="Gimme an adjective" value="">
+            </div>
+            <div class="formGroup">
+                <label for="fastFoodChain">Fast Food Chain</label>
+                <input id="fastFoodChain" type="text" placeholder="Name a fast food chain" value="">
+            <div class="formGroup">
+                <label for="drink">Drink</label>
+                <input id="drink" type="text" placeholder="Name a beverage" value="">
+            </div>
+            <div class="formGroup">
+                <label for="pastTenseVerb">Past-Tense Verb</label>
+                <input id="pastTenseVerb" type="text" placeholder="Past-Tense Verb please" value="">
+            </div>
+            <div class="formGroup">
+                <label for="foodItem">Food Item</label>
+                <input id="foodItem" type="text" placeholder="Gimme a Food Item" value="">
+            </div>
+        </form>
+        <div id="story">
+            <h1>A Poorly Thought Out Story</h1>
+            <hr>
+            <div id="madlib"></div>
+        </div>
+        <button type="button" id="clickMe">Make Your Madlib!</button>
+    </div>
+</body>
+<script>
+    const myButton = document.getElementById("clickMe");
+    const inputNumber = document.getElementById("number");
+    const mActor = document.getElementById("maleActor");
+    const adj = document.getElementById("adjective");
+    const fastFood = document.getElementById("fastFoodChain");
+    const verb = document.getElementById("pastTenseVerb");
+    const drank = document.getElementById("drink");
+    const stadiumFood = document.getElementById("foodItem");
+    const myText = document.getElementById("madlib");
+
+    myButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        myText.innerHTML = `I drove ${inputNumber.value} miles to Chicago on Wednesday night looking for ${mActor.value} from Curb Your Enthusiasm. The trip was ${adj.value} and I desperately needed to stop for food at ${fastFood.value}. After eating way too much, I made it to the bar downtown and had a ${drank.value}. It was terrible.  I ${verb.value} the drink directly into the bartender's face and was kicked out of the premises. After wriggling free from the bouncer's grasp, I found my way over to Wrigley Field and found his section. I bought him a ${stadiumFood.value} and thanked him for his contribution to the arts.`;
+        
+    })
+</script>
+
+</html>
